@@ -32,3 +32,8 @@ response = client.list_objects(
 
 for content in response['Contents']:
     print(content['Key'])
+
+#list Buckets
+response = client.list_buckets()
+for bucket in response['Buckets']:
+    print(bucket['Name'])
